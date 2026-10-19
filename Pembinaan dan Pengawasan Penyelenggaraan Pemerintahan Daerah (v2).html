@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pembinaan dan Pengawasan Penyelenggaraan Pemerintahan Daerah</title>
+<style>
+:root{--bg:#070b1a;--ink:#eef1ff;--mut:#9aa6c8;--bd:rgba(255,255,255,.13);--cd:rgba(255,255,255,.055);--a:#8b6cff;--b:#22d3ee;--g:#f5b942;--p:#ff5c9a;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{background:var(--bg);scroll-padding-top:env(safe-area-inset-top,0px)}
+html,body{height:100%;margin:0}
+body{color:var(--ink);font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;line-height:1.45;background:radial-gradient(900px 520px at 88% -8%,rgba(139,108,255,.3),transparent),radial-gradient(760px 520px at -8% 108%,rgba(34,211,238,.2),transparent),var(--bg)}
+.deck{height:100%;display:flex;flex-direction:column}
+.pg{height:3px;background:var(--bd)}.pg i{display:block;height:100%;width:9%;background:linear-gradient(90deg,var(--b),var(--a),var(--p));transition:width .4s}
+.stage{flex:1;position:relative;overflow:hidden}
+.s{position:absolute;inset:0;overflow-y:auto;padding:clamp(16px,3.5vw,44px) clamp(14px,5vw,64px);opacity:0;visibility:hidden;transform:translateY(14px) scale(.99);transition:opacity .4s,transform .4s,visibility .4s}
+.s.on{opacity:1;visibility:visible;transform:none}
+.in{max-width:1120px;margin:0 auto}
+.k{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--b);border:1px solid var(--bd);border-radius:99px;padding:3px 12px;background:var(--cd)}
+h1,h2{background:linear-gradient(90deg,#fff,var(--b) 55%,var(--a));-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.15}
+h1{font-size:clamp(1.9rem,5.4vw,3.4rem);margin:.35em 0}
+h2{font-size:clamp(1.3rem,3vw,2rem);margin:.45em 0 18px}
+h3{margin:0 0 4px;font-size:1.02rem}
+p{margin:0 0 8px}.m{color:var(--mut);font-size:.88rem}
+.g{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(235px,1fr))}
+.c{position:relative;background:var(--cd);border:1px solid var(--bd);border-radius:18px;padding:16px;backdrop-filter:blur(6px);transition:transform .25s,border-color .25s}
+.c:hover{transform:translateY(-3px);border-color:var(--b)}
+.c::before{content:"";position:absolute;inset:0 0 auto;height:3px;border-radius:18px 18px 0 0;background:linear-gradient(90deg,var(--b),var(--a))}
+.c.x::before{background:linear-gradient(90deg,var(--p),var(--g))}
+.ic{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;font-size:1.25rem;font-weight:800;margin-bottom:8px;background:linear-gradient(135deg,rgba(34,211,238,.28),rgba(139,108,255,.32))}
+.c.x .ic{background:linear-gradient(135deg,rgba(255,92,154,.32),rgba(245,185,66,.3))}
+.c p{color:#d3d9ee;font-size:.9rem}
+.r{font-size:.78rem;border-radius:8px;padding:5px 8px;margin-top:6px;background:rgba(34,211,238,.09);border:1px solid rgba(34,211,238,.25)}
+.r b{display:block;color:var(--b);font-size:.68rem;letter-spacing:.08em}
+.r.q{background:rgba(139,108,255,.1);border-color:rgba(139,108,255,.32)}.r.q b{color:#b8a6ff}
+.ex{font-size:.82rem;color:var(--g);margin-top:8px}
+.tt{min-height:100%;display:flex;align-items:center}
+.st{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.st div{background:var(--cd);border:1px solid var(--bd);border-radius:14px;padding:10px 16px;font-size:.8rem;color:var(--mut)}
+.st b{display:block;font-size:1.6rem;color:#fff;background:linear-gradient(90deg,var(--b),var(--p));-webkit-background-clip:text;background-clip:text;color:transparent}
+.chip{display:inline-block;border:1px solid var(--bd);border-radius:99px;padding:5px 14px;margin:0 8px 8px 0;background:var(--cd);font-size:.9rem}
+.two{display:grid;gap:14px;grid-template-columns:2fr 1fr}
+.pn{background:var(--cd);border:1px solid var(--bd);border-radius:18px;padding:16px}
+.pn h3{color:var(--b)}.pn.x h3{color:var(--p)}
+.sv{overflow-x:auto;background:var(--cd);border:1px solid var(--bd);border-radius:18px;padding:8px}
+.sv svg{display:block;width:100%;min-width:820px;height:auto}
+.nd{stroke-width:1.4}.nt{font-size:16px;font-weight:700;fill:#fff}.ns{font-size:11.5px;fill:#cfd6f0}.nc{font-size:10.5px;fill:#9fb0ff}.lb{font-size:11px;fill:#cfd6f0}
+.lg{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:10px;font-size:.78rem;color:var(--mut)}
+.lg i{display:inline-block;width:22px;height:0;border-top:3px solid;vertical-align:middle;margin-right:6px}
+.tw{overflow-x:auto;border:1px solid var(--bd);border-radius:18px;background:var(--cd)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:.88rem}
+th,td{text-align:left;vertical-align:top;padding:11px 14px;border-bottom:1px solid var(--bd)}
+th{background:linear-gradient(90deg,rgba(34,211,238,.25),rgba(139,108,255,.3))}
+td:first-child{font-weight:700;color:var(--g);width:15%}tr:last-child td{border:0}
+.fl{display:flex;flex-wrap:wrap;gap:8px;align-items:stretch}
+.fl .c{flex:1 1 190px}.fl .ar{align-self:center;color:var(--b);font-size:1.5rem}
+.br{display:grid;gap:12px;grid-template-columns:1fr 1fr;margin-top:12px}
+.hl{margin-top:14px;padding:11px 15px;border-radius:14px;border:1px solid rgba(245,185,66,.4);background:rgba(245,185,66,.09);font-size:.9rem}
+.sk{display:grid;gap:8px}
+.sk div{display:flex;align-items:center;gap:10px;padding:9px 14px;border-radius:12px;color:#fff;font-size:.9rem;background:linear-gradient(90deg,rgba(34,211,238,.4),rgba(255,92,154,.55));border:1px solid var(--bd)}
+.sk b{display:grid;place-items:center;flex:none;width:26px;height:26px;border-radius:50%;background:rgba(0,0,0,.35)}
+.bar{display:flex;align-items:center;gap:10px;padding:8px clamp(12px,4vw,32px);border-top:1px solid var(--bd);background:rgba(7,11,26,.85)}
+.bar button{font:inherit;cursor:pointer;color:var(--ink);background:var(--cd);border:1px solid var(--bd);border-radius:10px;padding:6px 16px}
+.bar button:hover{border-color:var(--b)}.bar .sp{flex:1;text-align:center;color:var(--mut);font-size:.85rem}
+@media (max-width:720px){.two,.br{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="deck">
+<div class="pg"><i id="pg"></i></div>
+<div class="stage">
+
+<section class="s on tt"><div class="in">
+<span class="k">UU No. 23/2014 · PP No. 12/2017</span>
+<h1>Pembinaan dan Pengawasan Penyelenggaraan Pemerintahan Daerah</h1>
+<p class="m">Siapa yang membina dan mengawasi, bagaimana hirarkinya, apa instrumennya, dan apa konsekuensinya.</p>
+<div class="st"><div><b>7</b>aktor</div><div><b>2</b>jenis: umum dan teknis</div><div><b>4</b>instrumen pembinaan</div><div><b>5</b>instrumen pengawasan</div><div><b>7</b>ragam sanksi</div></div>
+</div></section>
+
+<section class="s"><div class="in">
+<span class="k">Poin 1 · Peta aktor</span><h2>7 aktor dalam dua kelompok</h2>
+<div class="two">
+<div class="pn"><h3>Kelompok I · Membina dan mengawasi (5)</h3>
+<span class="chip">🏛️ Mendagri</span><span class="chip">📘 Menteri Teknis / LPNK</span><span class="chip">🧭 Gubernur (Wakil Pemerintah Pusat)</span><span class="chip">🏢 Bupati / Wali Kota</span><span class="chip">🔍 APIP / Inspektorat</span></div>
+<div class="pn x"><h3>Kelompok II · Mengawasi saja (2)</h3>
+<span class="chip">⚖️ DPRD</span><span class="chip">👥 Masyarakat</span></div>
+</div>
+<div class="hl">Kelompok I adalah eksekutif internal. Kelompok II adalah pengawas eksternal dan partisipatif.</div>
+</div></section>
+
+<section class="s" data-d="a1" data-k="Poin 1 · Kelompok I" data-t="Aktor 1–3: dari pusat ke gubernur"></section>
+<section class="s" data-d="a2" data-k="Poin 1 · Kelompok I dan II" data-t="Aktor 4–7: daerah, APIP, DPRD, masyarakat"></section>
+
+<section class="s"><div class="in">
+<span class="k">Poin 2</span><h2>Bagan alur hirarki pembinaan dan pengawasan</h2>
+<div class="sv"><svg viewBox="0 0 1000 650" role="img" aria-label="Bagan hirarki pembinaan dan pengawasan">
+<defs>
+<marker id="mb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#22d3ee"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#f5b942"/></marker>
+<marker id="mt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8b6cff"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ff5c9a"/></marker>
+<linearGradient id="gg" x1="0" x2="1"><stop offset="0" stop-color="#f5b942" stop-opacity=".5"/><stop offset="1" stop-color="#ff5c9a" stop-opacity=".4"/></linearGradient>
+<linearGradient id="gb" x1="0" x2="1"><stop offset="0" stop-color="#22d3ee" stop-opacity=".4"/><stop offset="1" stop-color="#8b6cff" stop-opacity=".45"/></linearGradient>
+</defs>
+<g fill="none" stroke-width="2.2">
+<path d="M500 70V100H275V128" stroke="#22d3ee" marker-end="url(#mb)"/><path d="M500 100H725V128" stroke="#22d3ee" marker-end="url(#mb)"/>
+<path d="M420 167H580" stroke="#f5b942" stroke-dasharray="5 4" marker-start="url(#mg)" marker-end="url(#mg)"/>
+<path d="M275 206V236H450V263" stroke="#22d3ee" marker-end="url(#mb)"/><path d="M725 206V236H550V263" stroke="#22d3ee" marker-end="url(#mb)"/>
+<path d="M500 339V393" stroke="#22d3ee" marker-end="url(#mb)"/><path d="M500 469V523" stroke="#22d3ee" marker-end="url(#mb)"/>
+<path d="M790 432H652" stroke="#8b6cff" stroke-dasharray="5 4" marker-end="url(#mt)"/><path d="M885 390V302H652" stroke="#8b6cff" stroke-dasharray="5 4" marker-end="url(#mt)"/>
+<path d="M210 432H348" stroke="#ff5c9a" stroke-dasharray="5 4" marker-end="url(#mp)"/><path d="M115 589V622H885V481" stroke="#ff5c9a" stroke-dasharray="5 4" marker-end="url(#mp)"/>
+</g>
+<rect class="nd" x="400" y="8" width="200" height="62" rx="14" fill="url(#gg)" stroke="#f5b942"/><text class="nt" x="500" y="30" text-anchor="middle">PRESIDEN</text><text class="ns" x="500" y="47" text-anchor="middle">Pemegang tanggung jawab akhir</text><text class="nc" x="500" y="62" text-anchor="middle">UU 7(2)</text>
+<rect class="nd" x="130" y="130" width="290" height="76" rx="14" fill="url(#gb)" stroke="#22d3ee"/><text class="nt" x="275" y="152" text-anchor="middle">MENTERI DALAM NEGERI</text><text class="ns" x="275" y="169" text-anchor="middle">Koordinator nasional · pembinaan UMUM</text><text class="nc" x="275" y="186" text-anchor="middle">UU 8(3), 373(3) · PP 2(1), 11(1)</text><text class="nc" x="275" y="200" text-anchor="middle">Awasi: Provinsi</text>
+<rect class="nd" x="580" y="130" width="290" height="76" rx="14" fill="url(#gb)" stroke="#22d3ee"/><text class="nt" x="725" y="152" text-anchor="middle">MENTERI TEKNIS / LPNK</text><text class="ns" x="725" y="169" text-anchor="middle">Pembinaan dan pengawasan TEKNIS</text><text class="nc" x="725" y="186" text-anchor="middle">UU 8(1) · PP 3(1)a.2</text><text class="nc" x="725" y="200" text-anchor="middle">Awasi: Provinsi</text>
+<text class="lb" x="500" y="158" text-anchor="middle" fill="#f5b942">koordinasi</text><text class="nc" x="500" y="182" text-anchor="middle">PP 3(6)–(7)</text>
+<rect class="nd" x="350" y="265" width="300" height="74" rx="14" fill="url(#gb)" stroke="#22d3ee"/><text class="nt" x="500" y="288" text-anchor="middle">GUBERNUR · Wakil Pemerintah Pusat</text><text class="ns" x="500" y="306" text-anchor="middle">Binwas umum dan teknis kabupaten/kota</text><text class="nc" x="500" y="324" text-anchor="middle">UU 8(2), 373(2) · PP 3(1)b</text>
+<rect class="nd" x="350" y="395" width="300" height="74" rx="14" fill="url(#gb)" stroke="#22d3ee"/><text class="nt" x="500" y="418" text-anchor="middle">BUPATI / WALI KOTA</text><text class="ns" x="500" y="436" text-anchor="middle">Membina Perangkat Daerah dan Desa</text><text class="nc" x="500" y="454" text-anchor="middle">UU 380(1) · PP 17(1), 19(1)</text>
+<rect class="nd" x="350" y="525" width="300" height="64" rx="14" fill="rgba(255,255,255,.06)" stroke="#9aa6c8"/><text class="nt" x="500" y="552" text-anchor="middle">PERANGKAT DAERAH DAN DESA</text><text class="ns" x="500" y="572" text-anchor="middle">Obyek pembinaan dan pengawasan</text>
+<rect class="nd" x="20" y="395" width="190" height="74" rx="14" fill="rgba(255,92,154,.16)" stroke="#ff5c9a"/><text class="nt" x="115" y="418" text-anchor="middle">DPRD</text><text class="ns" x="115" y="436" text-anchor="middle">Pengawasan kebijakan</text><text class="nc" x="115" y="454" text-anchor="middle">UU 154(1)c · PP 20(1)</text>
+<rect class="nd" x="20" y="525" width="190" height="64" rx="14" fill="rgba(255,92,154,.16)" stroke="#ff5c9a"/><text class="nt" x="115" y="552" text-anchor="middle">MASYARAKAT</text><text class="nc" x="115" y="572" text-anchor="middle">UU 351(1) · PP 22(1)</text>
+<rect class="nd" x="790" y="390" width="190" height="90" rx="14" fill="rgba(139,108,255,.18)" stroke="#8b6cff"/><text class="nt" x="885" y="414" text-anchor="middle">APIP</text><text class="ns" x="885" y="431" text-anchor="middle">Itjen · Insp. Provinsi</text><text class="ns" x="885" y="445" text-anchor="middle">Insp. Kab/Kota</text><text class="nc" x="885" y="463" text-anchor="middle">UU 380(2) · PP 17(2)</text><text class="nc" x="885" y="475" text-anchor="middle">+ APH / Ombudsman</text>
+<text class="lb" x="720" y="425" text-anchor="middle">membantu</text><text class="lb" x="770" y="296" text-anchor="middle">membantu</text><text class="lb" x="280" y="425" text-anchor="middle">mengawasi</text>
+<text class="lb" x="500" y="640" text-anchor="middle" fill="#ff8ab8">pengaduan dan partisipasi → APIP / APH / Ombudsman</text>
+<text class="lb" x="515" y="368">umum + teknis</text><text class="lb" x="515" y="500">membina + mengawasi</text>
+</svg></div>
+<div class="lg"><span><i style="border-color:#22d3ee"></i>Jalur vertikal eksekutif</span><span><i style="border-color:#f5b942;border-top-style:dashed"></i>Koordinasi</span><span><i style="border-color:#8b6cff;border-top-style:dashed"></i>Dukungan APIP</span><span><i style="border-color:#ff5c9a;border-top-style:dashed"></i>Pengawasan eksternal</span></div>
+</div></section>
+
+<section class="s"><div class="in">
+<span class="k">Poin 3</span><h2>Pengawasan umum vs pengawasan teknis</h2>
+<div class="tw"><table>
+<tr><th>Aspek</th><th>Pengawasan Umum</th><th>Pengawasan Teknis</th></tr>
+<tr><td>Dasar hukum</td><td><b>UU 23/2014:</b> Pasal 374(2), 375(4)<br><b>PP 12/2017:</b> Pasal 3(2), 10(2)</td><td><b>UU 23/2014:</b> Pasal 374(3), 375(5)<br><b>PP 12/2017:</b> Pasal 3(3), 10(3)–(4)</td></tr>
+<tr><td>Aktor</td><td>Mendagri (provinsi) dan Gubernur sebagai Wakil Pemerintah Pusat (kabupaten/kota)</td><td>Menteri Teknis/LPNK (provinsi) dan Gubernur sebagai Wakil Pemerintah Pusat (kabupaten/kota)</td></tr>
+<tr><td>Cakupan</td><td><b>9 aspek tata kelola:</b> pembagian urusan, kelembagaan, kepegawaian, keuangan, pembangunan, pelayanan publik, kerja sama, kebijakan daerah, kepala daerah dan DPRD</td><td><b>4 aspek urusan konkuren:</b> capaian SPM, ketaatan NSPK, dampak pelaksanaan urusan, akuntabilitas anggaran APBN</td></tr>
+<tr><td>Tujuan</td><td>Efisiensi, efektivitas, dan keterpaduan tata kelola birokrasi daerah</td><td>Ketaatan terhadap norma, standar, prosedur, dan kriteria nasional</td></tr>
+</table></div></div></section>
+
+<section class="s" data-d="pb" data-k="Poin 4 · A" data-t="Bentuk operasional pembinaan" data-n="Landasan umum: UU 23/2014 Pasal 374(4), 375(6) · PP 12/2017 Pasal 3(8)"></section>
+<section class="s" data-d="pw" data-k="Poin 4 · B" data-t="Bentuk operasional pengawasan APIP" data-n="Landasan umum: PP 12/2017 Pasal 10(11)–(12), 17(3), 18(2)"></section>
+
+<section class="s"><div class="in">
+<span class="k">Poin 5 · A</span><h2>Alur pengaduan masyarakat dan sinergi APIP–APH</h2>
+<div class="fl">
+<div class="c"><div class="ic">1</div><h3>Hak mengadu</h3><div class="r"><b>UU 23/2014</b>Pasal 351(1)</div><div class="r q"><b>PP 12/2017</b>Pasal 22(1)</div></div><span class="ar">›</span>
+<div class="c"><div class="ic">2</div><h3>Laporan tertulis</h3><p>Identitas pelapor, pihak dilaporkan, perbuatan yang dilanggar, fakta atau bukti petunjuk.</p><div class="r q"><b>PP 12/2017</b>Pasal 22(2)</div></div><span class="ar">›</span>
+<div class="c"><div class="ic">3</div><h3>Koordinasi APIP dan APH</h3><div class="r"><b>UU 23/2014</b>Pasal 385(1)–(3)</div><div class="r q"><b>PP 12/2017</b>Pasal 25(1)–(8)</div></div>
+</div>
+<div class="br">
+<div class="c"><div class="ic">⚙️</div><h3>Administratif → APIP</h3><div class="r"><b>UU 23/2014</b>Pasal 385(4)</div><div class="r q"><b>PP 12/2017</b>Pasal 25(9)</div></div>
+<div class="c x"><div class="ic">⚖️</div><h3>Pidana → APH</h3><div class="r"><b>UU 23/2014</b>Pasal 385(5)</div><div class="r q"><b>PP 12/2017</b>Pasal 25(10)</div></div>
+</div>
+<div class="hl"><b>Perlindungan masa tindak lanjut:</b> hasil pembinaan dan pengawasan tidak dapat dipidanakan selama masa tindak lanjut (paling lama 60 hari kerja). PP 12/2017 Pasal 27(5)–(6)</div>
+</div></section>
+
+<section class="s"><div class="in">
+<span class="k">Poin 5 · B</span><h2>Ragam sanksi administratif</h2>
+<p class="m">UU 23/2014 Pasal 353 · PP 12/2017 Pasal 36 s.d. 47 (ragam sanksi: Pasal 37(4))</p>
+<div class="sk" id="sk"></div>
+</div></section>
+
+<section class="s" data-d="is" data-k="Poin 6" data-t="Isu strategis dan tantangan pengawasan saat ini"></section>
+
+</div>
+<div class="bar"><button id="pv" aria-label="Sebelumnya">←</button><span class="sp" id="ct"></span><button id="nx" aria-label="Berikutnya">→</button></div>
+</div>
+<script>
+(function(){
+var D={
+a1:[
+["🏛️","Menteri Dalam Negeri","Koordinator nasional; pembinaan dan pengawasan umum atas daerah provinsi.","Pasal 8(3), 373(3), 374(1)–(2)","Pasal 2(1), 3(1)a.1 dan (2), 10(1)a.1 dan (2)","Evaluasi Raperda APBD Provinsi."],
+["📘","Menteri Teknis / Kepala LPNK","Pembinaan dan pengawasan teknis substansi urusan konkuren di provinsi.","Pasal 8(1), 374(1) dan (3), 377(2)","Pasal 3(1)a.2 dan (3), 10(1)a.2 dan (3)","Kemenkes mengawasi capaian SPM kesehatan."],
+["🧭","Gubernur sebagai Wakil Pemerintah Pusat","Pembinaan dan pengawasan umum dan teknis atas kabupaten/kota.","Pasal 8(2), 373(2), 375(1) dan (3)–(5), 378(1)","Pasal 3(1)b, 10(1)b","Evaluasi Raperda APBD/RPJMD kabupaten/kota."]],
+a2:[
+["🏢","Bupati / Wali Kota","Membina dan mengawasi Perangkat Daerah serta Pemerintahan Desa, dibantu Camat dan Inspektorat.","Pasal 380(1)","Pasal 17(1), 19(1)–(2)","Evaluasi akuntabilitas Dana Desa."],
+["🔍","APIP / Inspektorat","Pengawasan teknis operasional: audit, reviu, monitoring, evaluasi, pemeriksaan.","Pasal 377(3), 379(2), 380(2)","Pasal 1 angka 3, 10(12), 15(1), 16(1), 17(2)","Reviu laporan keuangan daerah sebelum diaudit BPK."],
+["⚖️","DPRD","Pengawasan kebijakan atas Perda, Perkada, dan tindak lanjut LHP BPK.","Pasal 153(1), 154(1) huruf c","Pasal 20(1)–(2)","RDP atau Pansus untuk mengawasi APBD.","x"],
+["👥","Masyarakat","Pengawasan partisipatif; melapor kepada APIP dan/atau APH.","Pasal 351(1)–(2)","Pasal 21(1)–(2), 22(1)","Lapor pungli lewat SP4N-LAPOR!","x"]],
+pb:[
+["1","Fasilitasi","Pemberdayaan, penguatan kapasitas, dan bimbingan teknis dari perencanaan sampai pertanggungjawaban.","","Pasal 4(1)–(4)"],
+["2","Konsultasi","Petunjuk dan pendapat atas permasalahan mendesak yang belum diatur tegas.","","Pasal 5(1)–(7)"],
+["3","Pendidikan dan Pelatihan","Pengembangan kompetensi teknis dan fungsional substantif penyelenggara Pemda.","","Pasal 6(1)–(2)"],
+["4","Penelitian dan Pengembangan","Pengkajian, penerapan, dan perekayasaan sebagai dasar perumusan kebijakan daerah.","","Pasal 8(1)–(4)"]],
+pw:[
+["1","Reviu","Penelaahan ulang dokumen atau laporan agar sesuai standar dan aturan.","","Pasal 18(2) huruf c dan Penjelasan Pasal 10(11)","","x"],
+["2","Monitoring","Penilaian kemajuan pelaksanaan program dan kegiatan.","","Pasal 18(2) huruf e dan Penjelasan Pasal 10(11)","","x"],
+["3","Evaluasi","Penilaian pencapaian hasil dan dampak kebijakan.","","Pasal 18(2) huruf e","","x"],
+["4","Pemeriksaan (Audit)","Pemeriksaan berkala, sewaktu-waktu, atau terpadu atas manfaat kebijakan dan keuangan.","","Pasal 18(2) huruf a dan b","","x"],
+["5","Pengusutan","Pemeriksaan mendalam atas kebenaran pengaduan indikasi penyimpangan.","","Pasal 18(2) huruf d","","x"]],
+is:[
+["🛡️","Independensi dan profesi APIP","APIP bekerja profesional dan independen, dengan alokasi anggaran khusus pengawasan Pemda.","","Pasal 16(1)–(2), 14(2)"],
+["📅","Harmonisasi jadwal pengawasan","Mendagri, Menteri Teknis, dan Gubernur menyusun harmonisasi jadwal agar pengawasan tidak tumpang tindih.","","Pasal 13(1)–(3)"],
+["📣","Pengawasan partisipatif dan akuntabilitas publik","Kepala Daerah wajib melaksanakan rekomendasi Ombudsman atas pengaduan masyarakat.","Pasal 351(4)","Pasal 21(1)–(2)"]]};
+document.querySelectorAll('[data-d]').forEach(function(s){
+  var d=D[s.dataset.d],h='';
+  d.forEach(function(c){
+    h+='<div class="c '+(c[6]||'')+'"><div class="ic">'+c[0]+'</div><h3>'+c[1]+'</h3><p>'+c[2]+'</p>'
+     +(c[3]?'<div class="r"><b>UU 23/2014</b>'+c[3]+'</div>':'')
+     +'<div class="r q"><b>PP 12/2017</b>'+c[4]+'</div>'
+     +(c[5]?'<div class="ex">Contoh: '+c[5]+'</div>':'')+'</div>';
+  });
+  s.innerHTML='<div class="in"><span class="k">'+s.dataset.k+'</span><h2>'+s.dataset.t+'</h2><div class="g">'+h+'</div>'+(s.dataset.n?'<p class="m" style="margin-top:12px">'+s.dataset.n+'</p>':'')+'</div>';
+});
+var K=["Teguran tertulis (pertama dan kedua)","Hak keuangan tidak dibayarkan 3 atau 6 bulan","Penundaan evaluasi rancangan Perda","Pengambilalihan kewenangan perizinan","Penundaan atau pemotongan DAU dan/atau DBH","Pembinaan khusus pendalaman bidang pemerintahan (1–3 bulan)","Pemberhentian sementara 3 bulan hingga pemberhentian tetap"];
+document.getElementById('sk').innerHTML=K.map(function(t,i){return '<div style="width:'+(52+i*8)+'%;min-width:min(100%,300px)"><b>'+(i+1)+'</b>'+t+'</div>'}).join('');
+var S=[].slice.call(document.querySelectorAll('.s')),i=0,ct=document.getElementById('ct'),pg=document.getElementById('pg');
+function go(n){
+  i=Math.max(0,Math.min(S.length-1,n));
+  S.forEach(function(e,k){e.classList.toggle('on',k===i)});
+  ct.textContent=(i+1)+' / '+S.length;pg.style.width=((i+1)/S.length*100)+'%';S[i].scrollTop=0;
+  try{history.replaceState(null,'','#'+(i+1))}catch(e){}
+}
+document.getElementById('pv').onclick=function(){go(i-1)};
+document.getElementById('nx').onclick=function(){go(i+1)};
+document.addEventListener('keydown',function(e){
+  if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' '){e.preventDefault();go(i+1)}
+  else if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();go(i-1)}
+  else if(e.key==='Home')go(0);else if(e.key==='End')go(S.length-1);
+});
+var x0=null,y0=null;
+document.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;y0=e.touches[0].clientY},{passive:true});
+document.addEventListener('touchend',function(e){
+  if(x0===null)return;
+  var dx=e.changedTouches[0].clientX-x0,dy=e.changedTouches[0].clientY-y0;
+  if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.5)go(i+(dx<0?1:-1));
+  x0=null;
+},{passive:true});
+var h=parseInt((location.hash||'').slice(1),10);go(h>0?h-1:0);
+})();
+</script>
+</body>
+</html>
